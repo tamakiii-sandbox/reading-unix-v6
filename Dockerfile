@@ -25,5 +25,5 @@ RUN make -C /tmp/simh/simh pdp11 && \
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-ENTRYPOINT [ "/usr/local/bin/docker-entrypoint.sh" ]
-CMD [ "/usr/local/bin/pdp11" ]
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+CMD ["/usr/local/bin/pdp11"]
