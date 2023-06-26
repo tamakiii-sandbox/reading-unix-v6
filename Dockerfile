@@ -22,8 +22,7 @@ RUN apt update -y && \
 RUN make -C /tmp/simh/simh pdp11
 
 RUN cp /tmp/simh/simh/BIN/pdp11 /usr/local/bin/pdp11 && \
-    true
-    # rm -rf /tmp/simh
+    rm -rf /tmp/simh
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 COPY unix_v6.ini /work/unix_v6.ini
