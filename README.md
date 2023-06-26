@@ -6,5 +6,5 @@
 
 ## How to use
 ```sh
-make -f docker.mk setup build pd11
+make -f docker.mk setup build pdp11
 ```
