@@ -3,7 +3,7 @@
 IMAGE := tamakiii-sandbox/reading-unix-v6
 TAG := latest
 
-run = docker run -it --rm -v /tmp -w /tmp $(IMAGE):$(TAG) $1
+run = docker run -it --rm $(IMAGE):$(TAG) $1
 
 help:
 	@cat $(firstword $(MAKEFILE_LIST))
@@ -18,7 +18,7 @@ bash:
 	$(call run,$@)
 
 pdp11:
-	$(call run,$@)
+	$(call run)
 
 teardown:
 	$(MAKE) -f dependency.mk clean
