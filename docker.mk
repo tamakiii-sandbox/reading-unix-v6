@@ -10,7 +10,7 @@ setup: \
 	depencency/simh/simh
 
 build: Dockerfile
-	docker build -t $(IMAGE):$(TAG)) .
+	docker build -t $(IMAGE):$(TAG) .
 
 bash:
 	docker run -it --rm -v /tmp -w /tmp $(IMAGE):$(TAG) $@
