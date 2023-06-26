@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-COPY depencency/simh/simh /tmp/simh/simh
+COPY dependency/simh/simh /tmp/simh/simh
 
 RUN apt update -y && \
     apt install -y --no-install-recommends \
