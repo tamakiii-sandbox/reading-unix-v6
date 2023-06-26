@@ -19,4 +19,11 @@ RUN apt update -y && \
         && \
     apt clean all
 
-RUN make -C /tmp/simh/simh pdp11
+RUN make -C /tmp/simh/simh pdp11 && \
+    cp /tmp/simh/simh/BIN/pdp11 /usr/local/bin/pdp11 && \
+    rm -rf /tmp/simh
+
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
+ENTRYPOINT [ "/usr/local/bin/docker-entrypoint.sh" ]
+CMD [ "/usr/local/bin/pdp11" ]
