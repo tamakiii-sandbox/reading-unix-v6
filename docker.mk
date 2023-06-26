@@ -1,4 +1,4 @@
-.PHONY: help build bash pd11 clean
+.PHONY: help build bash pdp11 clean
 
 IMAGE := tamakiii-sandbox/reading-unix-v6
 TAG := latest
@@ -15,10 +15,10 @@ build: Dockerfile
 	docker build -t $(IMAGE):$(TAG) .
 
 bash:
-	$(call run, $@)
+	$(call run,$@)
 
-pd11:
-	$(call run, $@)
+pdp11:
+	$(call run,$@)
 
 teardown:
 	$(MAKE) -f dependency.mk clean
