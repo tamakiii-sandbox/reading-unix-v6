@@ -8,3 +8,11 @@
 ```sh
 make -f docker.mk setup build pdp11
 ```
+```sh
+@unix
+
+login: root
+# ls -lsah
+# sync
+^E # exit
+```
